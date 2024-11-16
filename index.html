@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Gamifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Task Gamifier</h1>
+    </header>
+    <div id="progressSection">
+        <p id="progressLabel">Points Needed for Next Level</p>
+        <div id="progressContainer">
+            <div id="progressBar"></div>
+        </div>
+    </div>
+    <div id="status">
+        <p>Points: <span id="points">0</span></p>
+        <p>Level: <span id="level">1</span></p>
+    </div>
+    <div id="taskInput">
+        <input type="text" id="newTask" placeholder="Add a new task">
+        <button id="addTask">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+    <div id="levelUpOverlay"></div>
+    <div id="levelUpModal">
+        <p id="modalMessage"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+
+body {
+    font-family: 'Baloo 2', sans-serif;
+    background: url('images/background_pattern.svg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    color: #333333;
+    transition: background-color 0.5s ease;
+}
+
+/* Progress meter styling */
+#progressSection {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#progressLabel {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#progressContainer {
+    width: 100%;
+    background-color: #E0E0E0;
+    border-radius: 15px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #FFAB91, #FF7043);
+    border-radius: 15px;
+    transition: width 0.3s ease-in-out;
+}
+
+header {
+    text-align: center;
+    background-color: #FFAB91;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    font-size: 26px;
+}
+
+#taskInput {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#taskInput input {
+    font-family: 'Baloo 2', sans-serif;
+    padding: 12px;
+    width: 320px;
+    margin-right: 10px;
+    border: 2px solid #B39DDB;
+    border-radius: 8px;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#taskInput button {
+    background: url('images/add_task_button.svg'), url('images/add_task_button.png') no-repeat center center;
+    background-size: contain;
+    width: 65px;
+    height: 65px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#taskInput button:hover {
+    transform: scale(1.2);
+}
+
+/* Task list fixes */
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Baloo 2', sans-serif;
+    background: linear-gradient(120deg, #FCE4EC, #C8E6C9);
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    box-sizing: border-box;
+}
+
+/* Modal styling */
+#levelUpModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+    font-size: 18px;
+    display: none;
+}
+
+#levelUpOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+/* Point animation */
+@keyframes point-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+#points.add-points {
+    animation: point-bounce 0.5s ease-out;
+}
