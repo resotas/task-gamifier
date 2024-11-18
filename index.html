@@ -1,34 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Gamifier</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task Gamifier</title>
+	<!-- Webフォントの読み込み -->
+	<style>
+		@font-face {
+			font-family: 'PixelMplus10-Regular';
+			src: url('fonts/PixelMplus10-Regular.ttf') format('truetype');
+		}
+	</style>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Task Gamifier</h1>
-    </header>
-    <div id="progressSection">
-        <p id="progressLabel">Points Needed for Next Level</p>
-        <div id="progressContainer">
-            <div id="progressBar"></div>
-        </div>
-    </div>
-    <div id="status">
-        <p>Points: <span id="points">0</span></p>
-        <p>Level: <span id="level">1</span></p>
-    </div>
-    <div id="taskInput">
-        <input type="text" id="newTask" placeholder="Add a new task">
-        <button id="addTask">Add</button>
-    </div>
-    <ul id="taskList"></ul>
-    <div id="levelUpOverlay"></div>
-    <div id="levelUpModal">
-        <p id="modalMessage"></p>
-    </div>
-    <script src="app.js"></script>
+	<header>
+		<img src="images/logo.png" alt="Task Gamifier ロゴ" class="logo">
+		<h1 id="levelDisplay">レベル: 1</h1>
+		<h2 id="experienceDisplay">次のレベルまでの経験値は <span id="experienceNeeded">50</span> ポイント</h2>
+		<div id="progressBarContainer">
+			<div id="progressBar"></div>
+		</div>
+	</header>
+	<main>
+		<input type="text" id="taskInput" placeholder="タスクを入力してください">
+		<button id="addTaskButton" onclick="addTask(document.getElementById('taskInput').value)">タスクを追加</button>
+		
+		<ul id="taskList"></ul>
+		
+		<!-- ステータス表示エリア -->
+		<div id="statsDisplay">
+			<h3>現在のステータス</h3>
+			<p>ちから: 0</p>
+			<p>すばやさ: 0</p>
+			<p>たいりょく: 0</p>
+			<p>かしこさ: 0</p>
+			<p>うんのよさ: 0</p>
+		</div>
+	</main>
+	<!-- レベルアップ通知モーダル -->
+	<div id="levelUpModal" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal()">&times;</span>
+			<h2>レベルが上がった！</h2>
+			<p>レベルアップメッセージがここに表示されます。</p>
+		</div>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>
