@@ -166,3 +166,10 @@ ul li button:hover {
 .modal-content .close:hover {
 	color: #FFC300;
 }
+
+/* スマートフォンのみの表示調整 */
+@media screen and (max-width: 768px) {
+	#experienceDisplay {
+		white-space: pre-line; /* 改行を有効にする */
+	}
+}
