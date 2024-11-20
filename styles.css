@@ -55,109 +55,16 @@ header {
 
 /* タスク追加ボタン */
 #addTaskButton {
-	background-color: #FFD700;
-	border: none;
-	padding: 10px 20px;
-	cursor: pointer;
-	border-radius: 5px;
-	font-size: 16px;
-	font-family: 'PixelMplus10-Regular', sans-serif;
+	background-color: black; /* ボタンの背景色を黒に設定 */
+	color: white; /* テキスト色を白に設定 */
+	border: none; /* デフォルトのボーダーを削除 */
+	padding: 10px 20px; /* パディングを指定 */
+	cursor: pointer; /* ポインタを指定 */
+	border-radius: 5px; /* 角を丸める */
+	font-size: 16px; /* フォントサイズ */
+	font-family: 'PixelMplus10-Regular', sans-serif; /* Webフォントを適用 */
 	transition: background-color 0.3s ease-in-out;
 }
 
 #addTaskButton:hover {
-	background-color: #FFC300;
-}
-
-/* タスクリスト */
-ul {
-	list-style: none;
-	padding: 0;
-	margin-top: 20px;
-}
-
-ul li {
-	background-color: #333;
-	color: white;
-	padding: 10px;
-	margin-bottom: 10px;
-	border-radius: 5px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-family: 'PixelMplus10-Regular', sans-serif;
-}
-
-ul li button {
-	background-color: #FFD700;
-	border: none;
-	padding: 5px 10px;
-	cursor: pointer;
-	border-radius: 3px;
-	font-size: 14px;
-	font-family: 'PixelMplus10-Regular', sans-serif;
-	transition: background-color 0.3s ease-in-out;
-	color: white; /* テキスト色を明示的に白に設定 */
-	background: none; /* Safariのデフォルトスタイルをリセット */
-}
-
-ul li button:hover {
-	background-color: #FFC300;
-	color: white; /* ホバー時のテキスト色 */
-}
-
-/* 現在のステータスのスタイリング */
-#statsDisplay {
-	border: 2px solid white; /* 白い枠線 */
-	border-radius: 10px; /* 角を丸める */
-	padding: 15px; /* 内側の余白 */
-	margin-top: 20px; /* 上の余白 */
-	background-color: #2a2a35; /* ボックスの背景色 */
-	color: white; /* テキスト色 */
-	text-align: left; /* 左寄せ */
-	width: 80%; /* 幅 */
-	max-width: 400px; /* 最大幅 */
-}
-
-/* モーダル */
-.modal {
-	display: none; /* 初期状態は非表示 */
-	position: fixed;
-	z-index: 1000;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.8);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.modal-content {
-	background-color: #1d1d28;
-	padding: 20px;
-	border: 2px solid #FFD700;
-	border-radius: 10px;
-	width: 80%;
-	max-width: 400px;
-	text-align: center;
-	color: white;
-	font-family: 'PixelMplus10-Regular', sans-serif;
-}
-
-.modal-content .close {
-	color: #FFD700;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-	cursor: pointer;
-	position: absolute;
-	top: 10px;
-	right: 10px;
-}
-
-.modal-content .close:hover {
-	color: #FFC300;
-}
+	background-color: #333; /* ホバー時に少し明るい
