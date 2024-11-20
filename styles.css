@@ -93,8 +93,10 @@ ul li {
 	font-family: 'PixelMplus10-Regular', sans-serif;
 }
 
+/* 完了ボタン */
 ul li button {
-	background-color: #FFD700;
+	background-color: #FFD700; /* ボタン背景色 */
+	color: black; /* テキスト色を黒に設定 */
 	border: none;
 	padding: 5px 10px;
 	cursor: pointer;
@@ -102,12 +104,11 @@ ul li button {
 	font-size: 14px;
 	font-family: 'PixelMplus10-Regular', sans-serif;
 	transition: background-color 0.3s ease-in-out;
-	color: white;
 }
 
 ul li button:hover {
-	background-color: #FFC300;
-	color: white; /* ホバー時のテキスト色 */
+	background-color: #FFC300; /* ホバー時の背景色 */
+	color: black; /* ホバー時のテキスト色も黒に維持 */
 }
 
 /* 現在のステータスのスタイリング */
@@ -120,7 +121,7 @@ ul li button:hover {
 	color: white; /* テキスト色 */
 	text-align: left; /* 左寄せ */
 	width: 80%; /* 幅 */
-	max-width: 400px; /* 最大幅 */
+	max-width: 400px;
 }
 
 /* モーダル */
